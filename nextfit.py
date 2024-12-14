@@ -93,10 +93,10 @@ class NextFitMemoryAllocation:
 
         if allocated:
             self.show_message(f"Job '{job_name}' of size {job_size} KB allocated successfully!", "green")
+            self.update_memory_table()
         else:
             self.show_message(f"Job '{job_name}' of size {job_size} KB could not be allocated.", "red")
 
-        self.update_memory_table()
 
     def complete_job(self):
         complete =False
